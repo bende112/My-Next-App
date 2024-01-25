@@ -1,0 +1,20 @@
+body {
+  background-color: beige;
+  color: rgb(18, 17, 14);
+}
+
+.destination {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.destination h3,
+.destination p {
+  margin: 0;
+}
+
+.destinations {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
