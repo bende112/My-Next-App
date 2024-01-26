@@ -1,29 +1,24 @@
-export default function Home() {
+import { sql } from "@vercel/postgres"
 
-  const destinations = [
-    {name: "Prague", weather: "Cold", food: "great", ambiance: true},
-    {name: "Venice", weather: "hot", food: "amazing", ambiance: true},
-    {name: "Bruges", weather: "Cold", food: "great", ambiance: true},
-    {name: "Rio", weather: "hot and hot", food: "awesome", ambiance: true},
-    {name: "Montegobay", weather: "hot", food: "lovely food", ambiance: true},
-    {name: "Limbe", weather: "hot and humid", food: "great food", ambiance: true},
+export default async function Home() {
 
-  ]
-
+  const places = await sql`SELECT * FROM destinations`;
 
   return (
     <div>
       <h1>Home</h1>
       <div className="destinations">
-      {destinations.map((destination)=>{
-        return <div key={destination.name} className="destination">
-          <h3>{destination.name}</h3>
-          <p>maiking {destination.weather} weather</p>
-          <p>{destination.food} foody</p>
-          <p>{destination.ambiance ? "tell us more" : "This is for all"}</p>
+      {places.rows.map((place)=>{
+        return <div key={place.name} className="destination">
+          <h3>{place.name}</h3>
+          <p>maiking {place.weather} weather</p>
+          <p>{place.food} foody</p>
+          <p>{place.ambiance ? "tell us more" : "This is for all"}</p>
           </div>
       })}
       </div>
     </div>
   )
 }
+
+
