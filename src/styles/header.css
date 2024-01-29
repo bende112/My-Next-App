@@ -1,0 +1,12 @@
+header {
+  background-color: cyan;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+nav a {
+  text-decoration: none;
+}

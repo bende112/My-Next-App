@@ -1,6 +1,7 @@
 body {
   background-color: beige;
   color: rgb(18, 17, 14);
+  margin: 0;
 }
 
 .destination {
@@ -17,4 +18,18 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.title {
+  text-align: center;
+}
+
+main {
+  padding: 1rem 10%;
+  min-height: 60vh;
 }
