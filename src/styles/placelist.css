@@ -1,0 +1,23 @@
+.destinations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.destination h3,
+.destination {
+  margin: 1;
+}
+
+.destination {
+  width: 200;
+  height: 200;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.30;
+  border-radius: 2px;
+  padding: 2rem;
+}

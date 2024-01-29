@@ -1,0 +1,28 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  height: 200px;
+  margin: 0 auto;
+  gap: 0.5rem;
+  box-shadow: 0 0 15px 4px;
+  padding:10px;
+  border-radius:10px;
+}
+
+form button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: black;
+  border: none;
+}
+
+div {
+  text-align: center;
+}
+
+button {
+  background-color: rgb(95, 146, 221);
+  margin: auto;
+}
