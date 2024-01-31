@@ -3,11 +3,18 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 0.5rem;
+  flex-direction: column;
 }
 
 .destination h3,
 .destination {
   margin: 1;
+}
+
+.destinations p {
+  font: small-caps bold 1.3rem sans-serif;
+  text-align: center;
 }
 
 .destination {

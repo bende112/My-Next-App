@@ -1,29 +1,25 @@
 import { sql } from "@vercel/postgres";
 import "@/styles/placelist.css";
+import Link from "next/link";
 
-export default async function PlaceList() {
 
-  const places = await sql`SELECT * FROM destinations`;
+export default async function placelist() {
 
-  // async function handleRemovePost(formData) {
-  //   "use server"
-  //   const removePost = await sql`DELETE FROM destinations`;
-
-  // }
+  const places = await sql`SELECT * FROM posts`;
+  console.log(places);
 
   return (
     <div>
       <div className="destinations">
       {places.rows.map((place)=>{
-        return <div key={place.name} className="destination">
-          <h3>{place.name}</h3>
-          <p>what a {place.weather} weather</p>
-          <p>{place.food} foody</p>
-          <p>{place.ambiance ? "tell us more" : "This is for all"}</p>
-          {/* <button onClick={RemovePost} type="unsubmit">Remove destination</button> */}
-          {/* <RemovePost /> */}
-          <button type="unsubmit">Remove destination</button>
-          </div>
+        return (
+        <Link key={place.name} href={`/posts/${place.id}`}>
+          <h3>{place.id}</h3>
+          <p>Tell me something about {place.content} your destination</p>
+          <p>{place.content ? "tell us more" : "This is for all"}</p>
+          {/* <button type="unsubmit">Remove destination</button> */}
+          </Link>
+        );
       })}
       </div>
     </div>

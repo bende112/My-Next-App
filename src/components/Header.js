@@ -7,7 +7,7 @@ export default function Header() {
       <h1>Holidays</h1>
       <nav>
       <Link href="/">Home</Link>
-      <Link href="/comments">Add new destination</Link>
+      <Link href="/posts">Add new destination</Link>
       </nav>
     </header>
 
